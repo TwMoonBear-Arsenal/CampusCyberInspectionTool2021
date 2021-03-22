@@ -30,14 +30,17 @@
 7. 點選`New pull request`，完成
 
 
-```sequence
+<div class="mermaid">
+sequenceDiagram
 title: sequence
-MoomBear->own: fork
-own->local: clone
+MoomBear->>own: fork
+own->>local: clone
 Note right of local: coding
-local-->own: push
-own-->MoomBear: pull request
-```
+local-->>own: push
+own-->>MoomBear: pull request
+</div>
+
+
 
 # News
 
@@ -76,3 +79,4 @@ own-->MoomBear: pull request
 
 
 $$1+1=2$$
+
