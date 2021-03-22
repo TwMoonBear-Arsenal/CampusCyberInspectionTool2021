@@ -2,6 +2,7 @@ import argparse  # 參數解析使用
 import os
 from Option import Option
 from functions.Clock import Clock
+from functions.shut import shut
 #test
 #Simon is db2
 def main():
@@ -16,6 +17,7 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
+    optionList.append(Option(77,"surprise"))
     print()
 
     while(True):
@@ -34,6 +36,8 @@ def main():
         print()
         if(selection == "1"):
             Clock.ShowTime()
+        elif(selection == "77"):
+            shut.shut()
         elif(selection == "99"):
             print("See you next time...")
             print()
