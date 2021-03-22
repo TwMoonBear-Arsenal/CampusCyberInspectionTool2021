@@ -16,6 +16,7 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
+    optionList.append(Option(87, "Simon is 87"))
     print()
 
     while(True):
@@ -38,6 +39,9 @@ def main():
             print("See you next time...")
             print()
             return
+        elif(selection == "87"):
+            for i in range(1,100):
+               print('878787878787 "Simon" db2')
         else:
             print("輸入錯誤")
 
