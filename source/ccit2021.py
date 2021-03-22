@@ -3,6 +3,8 @@ import os
 from Option import Option
 from functions.Clock import Clock
 import webbrowser
+from functions.Ipconfig import Showip
+
 
 def main():
     # 準備參數解析
@@ -16,6 +18,7 @@ def main():
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
+    optionList.append(Option(2, "顯示本地端IP地址"))
     print()
 
     while(True):
@@ -34,6 +37,8 @@ def main():
         print()
         if(selection == "1"):
             Clock.ShowTime()
+        elif(selection == '2'):
+            Showip.ipconfig()
         elif(selection == "99"):
             print("See you next time...")
             print()
