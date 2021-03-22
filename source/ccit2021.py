@@ -5,7 +5,7 @@ from functions.Clock import Clock
 #test
 
 def main():
-
+#哈哈是我啦
     # 準備參數解析
     app_description = "校園資安測試常用工具集合"
     epilog_text = "歡迎至https://github.com/TwMoonBear-Arsenal/BetterCalculator/issues提供建議"
