@@ -3,7 +3,7 @@ import os
 from Option import Option
 from functions.Clock import Clock
 #test
-
+#Simon is db2
 def main():
 
     # 準備參數解析
