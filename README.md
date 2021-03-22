@@ -29,7 +29,9 @@
 6. 回到GitHub頁面到**Pull requests**
 7. 點選`New pull request`，完成
 
-```seq
+
+```sequence
+title: sequence
 MoomBear->own: fork
 own->local: clone
 Note right of local: coding
@@ -68,10 +70,9 @@ own-->MoomBear: pull request
     - [tims871031](tims871031)
     - [wbird](wbird0606)
     - yunghank
-
+  
 
 [========]
-
 
 
 $$1+1=2$$
