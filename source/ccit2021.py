@@ -2,7 +2,8 @@ import argparse  # 參數解析使用
 import os
 from Option import Option
 from functions.Clock import Clock
-#test 123
+from functions.Ipconfig import Showip
+
 
 def main():
 
@@ -16,6 +17,7 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
+    optionList.append(Option(2, "顯示本地端IP地址"))
     print()
 
     while(True):
@@ -34,6 +36,8 @@ def main():
         print()
         if(selection == "1"):
             Clock.ShowTime()
+        elif(selection == '2'):
+            Showip.ipconfig()
         elif(selection == "99"):
             print("See you next time...")
             print()
