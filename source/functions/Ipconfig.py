@@ -1,5 +1,5 @@
 import os
-class ip:
+class Showip:
     def ipconfig():
-        print(os.system('ipconfig'))
-ip.ipconfig()
+        print(os.system('cmd/ipconfig'))
+Showip.ipconfig()
