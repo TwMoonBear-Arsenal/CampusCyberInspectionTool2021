@@ -7,4 +7,4 @@ class Showip:
         ip = ('hostname: %s, localIP: %s') % (myname, get_s.getsockname()[0])
         print(ip)
         return ip
-Showip.ipconfig()
+#Showip.ipconfig()
