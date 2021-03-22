@@ -2,10 +2,9 @@ import argparse  # 參數解析使用
 import os
 from Option import Option
 from functions.Clock import Clock
-#test 123
+import webbrowser
 
 def main():
-
     # 準備參數解析
     app_description = "校園資安測試常用工具集合"
     epilog_text = "歡迎至https://github.com/TwMoonBear-Arsenal/BetterCalculator/issues提供建議"
@@ -16,6 +15,7 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
+    optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
 
     while(True):
@@ -38,6 +38,10 @@ def main():
             print("See you next time...")
             print()
             return
+        elif(selection == "87"):
+            webbrowser.open("https://www.facebook.com/simon.lin.56829")
+            for i in range(1,100):
+               print('878787878787 "Simon" db2')
         else:
             print("輸入錯誤")
 
