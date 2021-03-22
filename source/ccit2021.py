@@ -2,9 +2,9 @@ import argparse  # 參數解析使用
 import os
 from Option import Option
 from functions.Clock import Clock
-import webbrowser
+from functions.shut import shut
 from functions.Ipconfig import Showip
-
+import webbrowser
 
 def main():
     # 準備參數解析
@@ -17,8 +17,9 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
-    optionList.append(Option(87, "Do you want know who is Simon?"))
     optionList.append(Option(2, "顯示本地端IP地址"))
+    optionList.append(Option(77,"surprise"))
+    optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
 
     while(True):
@@ -39,14 +40,16 @@ def main():
             Clock.ShowTime()
         elif(selection == '2'):
             Showip.ipconfig()
-        elif(selection == "99"):
-            print("See you next time...")
-            print()
-            return
+        elif(selection == "77"):
+            shut.shut()
         elif(selection == "87"):
             webbrowser.open("https://www.facebook.com/simon.lin.56829")
             for i in range(1,100):
                print('878787878787 "Simon" db2')
+        elif(selection == "99"):
+            print("See you next time...")
+            print()
+            return
         else:
             print("輸入錯誤")
 
