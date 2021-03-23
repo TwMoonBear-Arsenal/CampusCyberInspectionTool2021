@@ -30,16 +30,7 @@
 7. 點選`New pull request`，完成
 
 
-<div class="mermaid">
-sequenceDiagram
-title: sequence
-MoomBear->>own: fork
-own->>local: clone
-Note right of local: coding
-local-->>own: push
-own-->>MoomBear: pull request
-</div>
-
+![](https://i.ibb.co/R4ckvJg/seq.png)
 
 
 # News
@@ -60,23 +51,24 @@ own-->>MoomBear: pull request
 + teacher
     - [Carlton Chen](carlton0521)
 - 2021
-    - 51000000	
     - [AngeCHAO](AngeCHAO)
+    - 51000000
+    - [RyanBigWhale](kiritoryan)	
     - Angel0329
     - [DongDong](Dung-2000)
     - GucciHsuan
     - [huayi1985](huayi1985)
     - iYarYar
-    - [RyanBigWhale](kiritoryan)
     - [Kun](Kung-327)
     - simon242
     - [tims871031](tims871031)
-    - [wbird](wbird0606)
     - yunghank
+    - [wbird](wbird0606)
+
   
+----
+****
 
-[========]
 
-
-$$1+1=2$$
+$$ 1+1=2 $$
 
