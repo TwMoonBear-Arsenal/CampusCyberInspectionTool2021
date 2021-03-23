@@ -23,7 +23,7 @@
 
 1. 向<https://github.com/TwMoonBear-Arsenal>聲請權限
 2. 點擊畫面右上角的`Fork`，到自己的Repositories 
-3. clone到GitHub Desktop
+3. `clone`到GitHub Desktop
 4. 以VsCore打開，開始寫程式
 5. `push`到GitHub
 6. 回到GitHub頁面到**Pull requests**
@@ -72,8 +72,6 @@
 ----
 ****
 
-
-$$1+1=2$$
 
 
 
