@@ -15,7 +15,7 @@
 | source    | foloder                      | 存放執行程式的資料夾                     |
 | functions | foloder                      | 存放工具物件的資料夾                     |
 | ccit2021  | python                       | 執行程式的主程式                         |
-| Option    | python                       | 物件建構程式                        |
+| Option    | python                       | 物件建構程式                            |
 | LICENSE   | None                         | 證照                                    |
 | README    | Markdown Documentation File  | 自述文件，包含有軟體的描述或使用的注意事項 |
 
@@ -71,7 +71,7 @@
   
 ----
 ****
-========
+====
 
 $$1+1=2$$
 
