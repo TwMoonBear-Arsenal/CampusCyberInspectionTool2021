@@ -32,12 +32,12 @@
 
 <div class="mermaid">
 sequenceDiagram
-title: sequence
-MoomBear->>own: fork
-own->>local: clone
-Note right of local: coding
-local-->>own: push
-own-->>MoomBear: pull request
+title: sequence;
+MoomBear->>own: fork;
+own->>local: clone;
+Note right of local: coding;
+local-->>own: push;
+own-->>MoomBear: pull request;
 </div>
 
 
