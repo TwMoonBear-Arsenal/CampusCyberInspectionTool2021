@@ -30,7 +30,20 @@
 7. 點選`New pull request`，完成
 
 
+<<<<<<< HEAD
 ![](https://i.ibb.co/R4ckvJg/seq.png)
+=======
+<div class="mermaid">
+sequenceDiagram
+title: sequence;
+MoomBear->>own: fork;
+own->>local: clone;
+Note right of local: coding;
+local-->>own: push;
+own-->>MoomBear: pull request;
+</div>
+
+>>>>>>> 64ec840533e464f923e18406fd6becc23acdb043
 
 
 # News
@@ -70,5 +83,10 @@
 ****
 
 
+<<<<<<< HEAD
 $$ 1+1=2 $$
+=======
+
+$$1+1=2$$
+>>>>>>> 64ec840533e464f923e18406fd6becc23acdb043
 
