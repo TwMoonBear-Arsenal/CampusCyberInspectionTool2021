@@ -32,6 +32,7 @@
 5. `push`到GitHub
 6. 回到GitHub頁面到**Pull requests**
 7. 點選`New pull request`，完成
+
 ![](https://i.ibb.co/R4ckvJg/seq.png)
 
 ## Development Environment Recommended
