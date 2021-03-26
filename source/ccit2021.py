@@ -2,6 +2,7 @@ import argparse  # 參數解析使用
 import os
 from Option import Option
 from functions.Clock import Clock
+from functions.encryption import cryto
 #test
 
 def main():
@@ -16,6 +17,7 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
+    optionList.append(Option(3, "為被誤會的維吉尼亞獻上金鑰"))
     print()
 
     while(True):
@@ -34,6 +36,8 @@ def main():
         print()
         if(selection == "1"):
             Clock.ShowTime()
+        elif(selection == "3"):
+            cryto.encryp_Vige()
         elif(selection == "99"):
             print("See you next time...")
             print()
