@@ -4,6 +4,7 @@ from Option import Option
 from functions.Clock import Clock
 from functions.shut import shut
 from functions.Ipconfig import Showip
+from functions.Nslookup import Nslookup
 import webbrowser
 
 def main():
@@ -18,6 +19,7 @@ def main():
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
+    optionList.append(Option(3, "查找ip或hostname"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -35,11 +37,17 @@ def main():
 
         # 詢問使用者
         selection = input("請輸入需要的功能：").strip()
-        print()
         if(selection == "1"):
             Clock.ShowTime()
-        elif(selection == '2'):
+        elif(selection == "2"):
             Showip.ipconfig()
+        elif(selection == "3"):
+            nslookup_selection = input("\033[33mchoose type you want to use:\033[0m\n[1]hostname2ip\n[2]ip2hostname\n").strip()
+            #print(nslookup_selection)
+            if(nslookup_selection == "1"):
+                Nslookup.domainip()
+            else:
+                Nslookup.ipdomain()
         elif(selection == "77"):
             shut.shut()
         elif(selection == "87"):
