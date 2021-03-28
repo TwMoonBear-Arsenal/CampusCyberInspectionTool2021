@@ -22,9 +22,10 @@ def main():
     optionList.append(Option(2, "顯示本地端IP地址"))
     optionList.append(Option(3, "為被誤會的維吉尼亞獻上金鑰"))
     optionList.append(Option(4, "維吉尼亞加密"))
-    optionList.append(Option(5, "There is a P.K.*2"))
-    optionList.append(Option(6, "2_There is R.S.A"))
-    optionList.append(Option(7, "linear random priority"))
+    optionList.append(Option(5, "There is a Public Key"))
+    optionList.append(Option(6, "There is a Private Key"))
+    optionList.append(Option(7, "2_There is R.S.A"))
+    optionList.append(Option(8, "linear random priority"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -52,10 +53,12 @@ def main():
         elif(selection == "4"):
             cryto.encryp_Vige()
         elif(selection == "5"):
-            cryto.rsa_pp()
+            cryto.rsa_send()
         elif(selection == "6"):
-            cryto.Make_a_rsa()
+            cryto.rsa_read()
         elif(selection == "7"):
+            cryto.Make_a_rsa()
+        elif(selection == "8"):
             cryto.linr_radom()
         elif(selection == "77"):
             shut.shut()
