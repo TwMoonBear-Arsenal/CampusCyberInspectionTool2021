@@ -70,19 +70,29 @@ class cryto:
                 if t == 1 :
                     continue
             break   
-    n=p*q
-    r=(p-1)*(q-1)
-    e=0
-    d=0
-    for   i   in   range ( 2 , r ) : 
-        if   ( r-int(r/i)*i ) == 1 :
-            e=i
-            break
-    for   i   in   range ( 2 , r ) : 
-        if   ( (i*e) % r ) == 1 :
-            d=i
-            break
-    print("Public key(N,e)=({0},{1})\nPrivate key(N,d)=({2},{3})".format(n, e, n, d))
+        n=p*q
+        r=(p-1)*(q-1)
+        e=0
+        d=0
+        for   i   in   range ( 2 , r ) : 
+            if   ( r-int(r/i)*i ) == 1 :
+                e=i
+                break
+        for   i   in   range ( 2 , r ) : 
+            if   ( (i*e) % r ) == 1 :
+                d=i
+                break
+        print("Public key(N,e)=({0},{1})\nPrivate key(N,d)=({2},{3})".format(n, e, n, d))
+
+    def rsa_pp() :
+        import math
+        n,k=map(int,input("input your key :(split with space)").split())
+        text=input("plaintext/cyphertext=")
+        for i in text :
+            i=ord(i)
+            i=pow(i,k,n)
+            print(chr(i), end="")
+    
 
     def linr_radom() :  
         text=input("plaintext/cyphertext=")
