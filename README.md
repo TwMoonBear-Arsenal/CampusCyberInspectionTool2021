@@ -57,7 +57,7 @@
     - [huayi1985](huayi1985)
     - iYarYar
     - [Kun](Kung-327)
-    - [simon242](simon242)
+    - simon242
     - [tims871031](tims871031)
     - yunghank
     - [wbird](wbird0606)
