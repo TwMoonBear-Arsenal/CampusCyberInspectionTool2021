@@ -52,7 +52,7 @@ class cryto:
         print("公鑰(n,e) 只能加密小於n的整数m!!!")
         while(1) :
             p,q=map(int,input("choose two Prime number :(split with space)").split())
-            if   p > 1 : #查看因子 
+            if   p > 1 :  
                 t=0
                 for   i   in   range ( 2 , p ) : 
                     if   ( p % i ) == 0 : 
@@ -61,7 +61,7 @@ class cryto:
                         break
                 if t == 1 :
                     continue    
-            if   q > 1 : #查看因子 
+            if   q > 1 :
                 t=0
                 for   i   in   range ( 2 , q ) : 
                     if   ( q % i ) == 0 : 
@@ -85,14 +85,34 @@ class cryto:
                 break
         print("Public key(N,e)=({0},{1})\nPrivate key(N,d)=({2},{3})".format(n, e, n, d))
 
-    def rsa_pp() :
+    def rsa_send() :
         import math
+        import array as arr
         n,k=map(int,input("input your key :(split with space)").split())
+        name=input("enter the path of your bin :(Don't use the used name of bin!)")
+        output_file = open(name+".bin", 'wb')
         text=input("plaintext/cyphertext=")
+        fb=[]
         for i in text :
             i=ord(i)
             i=pow(i,k,n)
-            print(chr(i), end="")
+            fb.append(i)
+        int_array = arr.array('i', fb)  
+        int_array.tofile(output_file)
+        output_file.close()
+    
+    def rsa_read() :
+        n,k=map(int,input("input your key :(split with space)").split())
+        name=input("enter the path of your bin :")
+        with open(name + ".bin" , 'rb') as file:
+            int_bytes = file.read() 
+            for i in int_bytes :
+                if i == 0 :
+                    continue
+                i=pow(i,k,n)
+                print(chr(i), end="")
+
+
     
 
     def linr_radom() :  
