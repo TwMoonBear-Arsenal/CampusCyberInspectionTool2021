@@ -131,5 +131,6 @@ class cryto:
             a=b
             b=c
             c=t
+        print()
 
         
