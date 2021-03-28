@@ -49,6 +49,7 @@ class cryto:
         print("\n")
 
     def Make_a_rsa() :
+        print("公鑰(n,e) 只能加密小於n的整数m!!!")
         while(1) :
             p,q=map(int,input("choose two Prime number :(split with space)").split())
             if   p > 1 : #查看因子 
