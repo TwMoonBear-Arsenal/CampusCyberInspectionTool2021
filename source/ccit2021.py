@@ -5,6 +5,7 @@ from functions.Clock import Clock
 from functions.shut import shut
 from functions.Ipconfig import Showip
 from functions.netstat import netstat
+from functions.tracert import traceip
 import webbrowser
 
 def main():
@@ -47,7 +48,7 @@ def main():
             netstat.netstat()
         elif(selection == '10'):
             trace = input('請輸入目標ip或網域 : ')
-            print(os.system('tracert '+trace))
+            traceip.tracert(trace)
         elif(selection == "77"):
             shut.shut()
         elif(selection == "87"):
