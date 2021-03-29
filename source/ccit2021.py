@@ -1,12 +1,13 @@
-import argparse  # 參數解析使用
+import argparse
 import os
+import webbrowser
 from Option import Option
 from functions.Clock import Clock
 from functions.shut import shut
 from functions.Ipconfig import Showip
+from functions.CryptoSystem import *
 from functions.Nslookup import Nslookup
 from functions.PortScanner import Scanport
-import webbrowser 
 
 def main():
     # 準備參數解析
@@ -22,8 +23,8 @@ def main():
     optionList.append(Option(2, "顯示本地端IP地址"))
     optionList.append(Option(3, "ip或hostname相互反查"))
     optionList.append(Option(4, "詢找目標主機有開啟的port"))
-    optionList.append(Option(77,"surprise"))
-    optionList.append(Option(87, "Do you want know who is Simon?"))
+    optionList.append(Option(5,"Encrypt & Decrypt System"))
+
     print()
 
     while(True):
@@ -56,6 +57,8 @@ def main():
                 Scanport.portscannerTCP()
             else:
                 Scanport.portscannerUDP()
+        elif(selection=="5"):
+            CryptoSystem.Crypto_system_options()
         elif(selection == "99"):
             print("See you next time...")
             print()
