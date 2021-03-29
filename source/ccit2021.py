@@ -7,7 +7,7 @@ from functions.Ipconfig import Showip
 import webbrowser
 from functions.reptile_movie import reptile_movie
 
-def main(): 
+def main():
     # 準備參數解析
     app_description = "校園資安測試常用工具集合"
     epilog_text = "歡迎至https://github.com/TwMoonBear-Arsenal/BetterCalculator/issues提供建議"
