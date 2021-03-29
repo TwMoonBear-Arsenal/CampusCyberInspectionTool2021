@@ -5,7 +5,9 @@ from functions.Clock import Clock
 from functions.encryption import cryto
 from functions.shut import shut
 from functions.Ipconfig import Showip
-import webbrowser
+from functions.Nslookup import Nslookup
+from functions.PortScanner import Scanport
+import webbrowser 
 
 
 def main():
@@ -28,6 +30,8 @@ def main():
     optionList.append(Option(8, "LSFR_加密&解密"))
     optionList.append(Option(9, "木棒_加密"))
     optionList.append(Option(10, "木棒_解密"))
+    optionList.append(Option(3, "ip或hostname相互反查"))
+    optionList.append(Option(4, "詢找目標主機有開啟的port"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -45,10 +49,9 @@ def main():
 
         # 詢問使用者
         selection = input("請輸入需要的功能：").strip()
-        print()
         if(selection == "1"):
             Clock.ShowTime()
-        elif(selection == '2'):
+        elif(selection == "2"):
             Showip.ipconfig()
         elif(selection == "3"):
             cryto.decryp_Vige()
@@ -72,6 +75,18 @@ def main():
             webbrowser.open("https://www.facebook.com/simon.lin.56829")
             for i in range(1,100):
                print('878787878787 "Simon" db2')
+            nslookup_selection = input("\033[33mchoose type you want to use:\033[0m\n[1]hostname2ip\n[2]ip2hostname\n").strip()
+            #print(nslookup_selection)
+            if(nslookup_selection == "1"):
+                Nslookup.domainip()
+            else:
+                Nslookup.ipdomain()
+        elif(selection == "4"):
+            portscanner_selection = input("\033[33mchoose type you want to use:\033[0m\n[1]TCP\n[2]UDP\n").strip()
+            if(portscanner_selection == "1"):
+                Scanport.portscannerTCP()
+            else:
+                Scanport.portscannerUDP()
         elif(selection == "99"):
             print("See you next time...")
             print()
