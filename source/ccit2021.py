@@ -20,8 +20,8 @@ def main():
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
-    optionList.append(Option(3, "查詢本機port連線狀態"))
-    optionList.append(Option(4, "查詢本機與目標網路連線節點"))
+    optionList.append(Option(9, "查詢本機port連線狀態"))
+    optionList.append(Option(10, "查詢本機與目標網路連線節點"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -44,9 +44,9 @@ def main():
             Clock.ShowTime()
         elif(selection == '2'):
             Showip.ipconfig()
-        elif(selection == '3'):
+        elif(selection == '9'):
             netstat.netstat()
-        elif(selection == '4'):
+        elif(selection == '10'):
             traceip.tracert()
         elif(selection == "77"):
             shut.shut()
