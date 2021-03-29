@@ -51,13 +51,11 @@ def main():
             else:
                 Nslookup.ipdomain()
         elif(selection == "4"):
-            Scanport.portscanner()
-        elif(selection == "77"):
-            shut.shut()
-        elif(selection == "87"):
-            webbrowser.open("https://www.facebook.com/simon.lin.56829")
-            for i in range(1,100):
-               print('878787878787 "Simon" db2')
+            portscanner_selection = input("\033[33mchoose type you want to use:\033[0m\n[1]TCP\n[2]UDP\n").strip()
+            if(portscanner_selection == "1"):
+                Scanport.portscannerTCP()
+            else:
+                Scanport.portscannerUDP()
         elif(selection == "99"):
             print("See you next time...")
             print()
