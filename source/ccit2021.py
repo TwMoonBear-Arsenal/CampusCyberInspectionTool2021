@@ -20,7 +20,7 @@ def main():
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
-    optionList.append(Option(3, "查找ip或hostname"))
+    optionList.append(Option(3, "ip或hostname相互反查"))
     optionList.append(Option(4, "詢找目標主機有開啟的port"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
