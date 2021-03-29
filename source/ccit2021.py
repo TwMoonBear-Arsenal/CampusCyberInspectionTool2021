@@ -6,7 +6,6 @@ from functions.shut import shut
 from functions.Ipconfig import Showip
 import webbrowser
 from functions.openyt import openyt
-from functions.bypassuac import bypassuac
 
 def main():
     # 準備參數解析
@@ -21,7 +20,6 @@ def main():
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
     optionList.append(Option(18,"open youtube"))
-    optionList.append(Option(19,"bypass UAC"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -46,8 +44,6 @@ def main():
             Showip.ipconfig()
         elif(selection == "18"):
             openyt.openyt()
-        elif(selection == "19"):
-            bypassuac.bypass()
         elif(selection == "77"):
             shut.shut()
         elif(selection == "87"):
