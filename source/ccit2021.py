@@ -5,6 +5,7 @@ from functions.Clock import Clock
 from functions.shut import shut
 from functions.Ipconfig import Showip
 import webbrowser
+from functions.openyt import openyt
 
 def main():
     # 準備參數解析
@@ -18,6 +19,7 @@ def main():
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
+    optionList.append(Option(18,"open youtube"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -40,6 +42,8 @@ def main():
             Clock.ShowTime()
         elif(selection == '2'):
             Showip.ipconfig()
+        elif(selection == "18"):
+            openyt.openyt()
         elif(selection == "77"):
             shut.shut()
         elif(selection == "87"):
