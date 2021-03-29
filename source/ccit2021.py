@@ -6,6 +6,7 @@ from functions.shut import shut
 from functions.Ipconfig import Showip
 import webbrowser
 from functions.letter_frequency import frequency
+from functions.nmap import nmap
 
 def main():
     # 準備參數解析
@@ -21,6 +22,8 @@ def main():
     optionList.append(Option(2, "顯示本地端IP地址"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(78,"letter frequency"))
+    optionList.append(Option(79,"nmap"))
+    
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
 
@@ -46,6 +49,8 @@ def main():
             shut.shut()
         elif(selection=="78"):
             frequency()
+        elif(selection=="79"):
+            nmap()
         elif(selection == "87"):
             webbrowser.open("https://www.facebook.com/simon.lin.56829")
             for i in range(1,100):
