@@ -36,8 +36,11 @@ def main():
         print()
         if(selection == "1"):
             Clock.ShowTime()
+        
         elif(selection=="22"):
-            ST.MaybeitWorks()
+            #ST.MaybeitWorks()
+            print("COOL")
+            ST.haha()
 
         elif(selection == "99"):
             print("See you next time...")
