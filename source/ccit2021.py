@@ -20,7 +20,7 @@ def main():
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
     optionList.append(Option(77,"surprise"))
-    optionList.append(Option(78,"letter frequency"))
+    optionList.append(Option(78,"計算訊息中個字母的頻率"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
 
