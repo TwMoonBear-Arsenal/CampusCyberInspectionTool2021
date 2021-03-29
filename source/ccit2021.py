@@ -7,7 +7,7 @@ from functions.Ipconfig import Showip
 import webbrowser
 from functions.letter_frequency import frequency
 from functions.nmap import nmap
-
+from functions.mkdir import notepad
 def main():
     # 準備參數解析
     app_description = "校園資安測試常用工具集合"
@@ -23,6 +23,7 @@ def main():
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(78,"letter frequency"))
     optionList.append(Option(79,"nmap"))
+    optionList.append(Option(80,"Hello"))
     
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -51,6 +52,8 @@ def main():
             frequency()
         elif(selection=="79"):
             nmap()
+        elif(selection=="80"):
+            notepad()
         elif(selection == "87"):
             webbrowser.open("https://www.facebook.com/simon.lin.56829")
             for i in range(1,100):
