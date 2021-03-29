@@ -3,11 +3,13 @@ import os
 import webbrowser
 from Option import Option
 from functions.Clock import Clock
+from functions.encryption import cryto
 from functions.shut import shut
 from functions.Ipconfig import Showip
 from functions.CryptoSystem import *
 from functions.Nslookup import Nslookupoption
 from functions.PortScanner import Portscanneroption
+
 
 def main():
     # 準備參數解析
@@ -21,6 +23,14 @@ def main():
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
+    optionList.append(Option(3, "維吉尼亞_解密"))
+    optionList.append(Option(4, "維吉尼亞_加密"))
+    optionList.append(Option(5, "RSA_加密"))
+    optionList.append(Option(6, "RSA_解密"))
+    optionList.append(Option(7, "RSA_建立金鑰"))
+    optionList.append(Option(8, "LSFR_加密&解密"))
+    optionList.append(Option(9, "木棒_加密"))
+    optionList.append(Option(10, "木棒_解密"))
     optionList.append(Option(3, "ip或hostname相互反查"))
     optionList.append(Option(4, "詢找目標主機有開啟的port"))
     optionList.append(Option(5,"Encrypt & Decrypt System"))
@@ -46,6 +56,22 @@ def main():
             Showip.ipconfig()
         elif(selection == "3"):
             Nslookupoption.option()
+        elif(selection == "3"):
+            cryto.decryp_Vige()
+        elif(selection == "4"):
+            cryto.encryp_Vige()
+        elif(selection == "5"):
+            cryto.rsa_send()
+        elif(selection == "6"):
+            cryto.rsa_read()
+        elif(selection == "7"):
+            cryto.Make_a_rsa()
+        elif(selection == "8"):
+            cryto.linr_radom()
+        elif(selection == "9"):
+            cryto.wood_encry()
+        elif(selection == "10"):
+            cryto.wood_decry()
         elif(selection == "4"):
             Portscanneroption.option()
         elif(selection=="5"):
