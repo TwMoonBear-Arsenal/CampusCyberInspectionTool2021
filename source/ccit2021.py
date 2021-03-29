@@ -17,7 +17,7 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
-    optionList.append(Option(98, "顯示Python環境變數"))
+    optionList.append(Option(98, "顯示Python 'LanguageServer'路徑"))
     print()
 
     while(True):
