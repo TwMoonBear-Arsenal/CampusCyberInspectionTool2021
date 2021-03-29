@@ -24,6 +24,7 @@ def main():
     optionList.append(Option(4, "詢找目標主機有開啟的port"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
+    optionList.append(Option(78, "AES加密"))
     print()
 
     while(True):
