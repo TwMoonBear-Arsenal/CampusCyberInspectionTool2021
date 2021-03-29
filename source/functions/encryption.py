@@ -133,6 +133,7 @@ class cryto:
             c=t
         print()
 
+<<<<<<< HEAD
     def wood_decry() :
         text=input("input the cryto :")
         n=0
@@ -155,3 +156,6 @@ class cryto:
                 r=random.choice(l)
                 print(chr(r),end="")
             n=n+1
+=======
+        
+>>>>>>> e73652238ae1004ea7563a545f969892b96db992
