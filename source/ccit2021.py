@@ -5,9 +5,7 @@ from functions.Clock import Clock
 from functions.shut import shut
 from functions.Ipconfig import Showip
 import webbrowser
-from functions.Encrypt import Encrypt
-from functions.Decrypt import Decrypt
-from functions.Key_generate import Key_generate
+from functions.CryptoSystem import *
 
 def main():
     # 準備參數解析
@@ -21,11 +19,7 @@ def main():
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
-    optionList.append(Option(3, "generate the key"))
-    optionList.append(Option(4, "encrypt the message"))
-    optionList.append(Option(5, "decrypt the message"))
-    optionList.append(Option(6, "encrypt the file"))
-    optionList.append(Option(7, "decrypt the file"))
+    optionList.append(Option(10,"Encrypt & Decrypt System"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -48,16 +42,8 @@ def main():
             Clock.ShowTime()
         elif(selection == '2'):
             Showip.ipconfig()
-        elif(selection=="3"):
-            Key_generate.write_key()
-        elif(selection=="4"):
-            Encrypt.encrypt_message()
-        elif(selection=="5"):
-            Decrypt.decrypt_message()
-        elif(selection=="6"):
-            Encrypt.encrypt_file()
-        elif(selection=="7"):
-            Decrypt.decrypt_file()
+        elif(selection=="10"):
+            CryptoSystem.Crypto_system_options()
         elif(selection == "77"):
             shut.shut()
         elif(selection == "87"):
