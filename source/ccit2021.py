@@ -6,8 +6,8 @@ from functions.Clock import Clock
 from functions.shut import shut
 from functions.Ipconfig import Showip
 from functions.CryptoSystem import *
-from functions.Nslookup import Nslookup
-from functions.PortScanner import Scanport
+from functions.Nslookup import Nslookupoption
+from functions.PortScanner import Portscanneroption
 
 def main():
     # 準備參數解析
@@ -45,20 +45,11 @@ def main():
         elif(selection == "2"):
             Showip.ipconfig()
         elif(selection == "3"):
-            nslookup_selection = input("\033[33mchoose type you want to use:\033[0m\n[1]hostname2ip\n[2]ip2hostname\n").strip()
-            #print(nslookup_selection)
-            if(nslookup_selection == "1"):
-                Nslookup.domainip()
-            else:
-                Nslookup.ipdomain()
+            Nslookupoption.option()
         elif(selection == "4"):
-            portscanner_selection = input("\033[33mchoose type you want to use:\033[0m\n[1]TCP\n[2]UDP\n").strip()
-            if(portscanner_selection == "1"):
-                Scanport.portscannerTCP()
-            else:
-                Scanport.portscannerUDP()
+            Portscanneroption.option()
         elif(selection=="5"):
-            CryptoSystem.Crypto_system_options()
+            CryptoSystem.Cypto_system_options()
         elif(selection == "99"):
             print("See you next time...")
             print()
