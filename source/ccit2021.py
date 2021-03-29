@@ -47,7 +47,6 @@ def main():
         elif(selection == '9'):
             netstat.netstat()
         elif(selection == '10'):
-            trace = input('請輸入目標ip或網域 : ')
             traceip.tracert(trace)
         elif(selection == "77"):
             shut.shut()
