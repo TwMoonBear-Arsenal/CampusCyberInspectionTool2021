@@ -20,12 +20,14 @@ def main():
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
     optionList.append(Option(2, "顯示本地端IP地址"))
-    optionList.append(Option(3, "為被誤會的維吉尼亞獻上金鑰"))
-    optionList.append(Option(4, "維吉尼亞加密"))
-    optionList.append(Option(5, "There is a Public Key"))
-    optionList.append(Option(6, "There is a Private Key"))
-    optionList.append(Option(7, "2_There is R.S.A"))
-    optionList.append(Option(8, "linear random priority"))
+    optionList.append(Option(3, "維吉尼亞_解密"))
+    optionList.append(Option(4, "維吉尼亞_加密"))
+    optionList.append(Option(5, "RSA_加密"))
+    optionList.append(Option(6, "RSA_解密"))
+    optionList.append(Option(7, "RSA_建立金鑰"))
+    optionList.append(Option(8, "LSFR_加密&解密"))
+    optionList.append(Option(9, "木棒_加密"))
+    optionList.append(Option(10, "木棒_解密"))
     optionList.append(Option(77,"surprise"))
     optionList.append(Option(87, "Do you want know who is Simon?"))
     print()
@@ -60,6 +62,10 @@ def main():
             cryto.Make_a_rsa()
         elif(selection == "8"):
             cryto.linr_radom()
+        elif(selection == "9"):
+            cryto.wood_encry()
+        elif(selection == "10"):
+            cryto.wood_decry()
         elif(selection == "77"):
             shut.shut()
         elif(selection == "87"):
