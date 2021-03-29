@@ -2,6 +2,7 @@ import argparse  # 參數解析使用
 import os
 from Option import Option
 from functions.Clock import Clock
+from functions.Func import ST
 #test 123
 
 def main():
@@ -16,6 +17,7 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(Option(1, "顯示今天日期"))
+    optionList.append(Option(22, "你可以試試看我也沒試過(建議用系統管理員身分測試)"))
     print()
 
     while(True):
@@ -34,6 +36,9 @@ def main():
         print()
         if(selection == "1"):
             Clock.ShowTime()
+        elif(selection=="22"):
+            ST.MaybeitWorks()
+
         elif(selection == "99"):
             print("See you next time...")
             print()
