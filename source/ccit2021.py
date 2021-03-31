@@ -8,6 +8,7 @@ from functions.Ipconfig import Showip
 import webbrowser
 
 
+
 def main():
     # 準備參數解析
     app_description = "校園資安測試常用工具集合"
@@ -18,18 +19,9 @@ def main():
 
     # 準備選單
     optionList = []
-    optionList.append(Option(1, "顯示今天日期"))
-    optionList.append(Option(2, "顯示本地端IP地址"))
-    optionList.append(Option(3, "維吉尼亞_解密"))
-    optionList.append(Option(4, "維吉尼亞_加密"))
-    optionList.append(Option(5, "RSA_加密"))
-    optionList.append(Option(6, "RSA_解密"))
-    optionList.append(Option(7, "RSA_建立金鑰"))
-    optionList.append(Option(8, "LSFR_加密&解密"))
-    optionList.append(Option(9, "木棒_加密"))
-    optionList.append(Option(10, "木棒_解密"))
-    optionList.append(Option(77,"surprise"))
-    optionList.append(Option(87, "Do you want know who is Simon?"))
+    optionList.append(Option("1","顯示今天日期"))
+    optionList.append(Option("2","顯示本地端IP地址"))
+    optionList.append(Option("3","加解密工具"))
     print()
 
     while(True):
@@ -50,22 +42,8 @@ def main():
             Clock.ShowTime()
         elif(selection == '2'):
             Showip.ipconfig()
-        elif(selection == "3"):
-            cryto.decryp_Vige()
-        elif(selection == "4"):
-            cryto.encryp_Vige()
-        elif(selection == "5"):
-            cryto.rsa_send()
-        elif(selection == "6"):
-            cryto.rsa_read()
-        elif(selection == "7"):
-            cryto.Make_a_rsa()
-        elif(selection == "8"):
-            cryto.linr_radom()
-        elif(selection == "9"):
-            cryto.wood_encry()
-        elif(selection == "10"):
-            cryto.wood_decry()
+        elif(selection == '3') :
+            cryto.crytolist()
         elif(selection == "77"):
             shut.shut()
         elif(selection == "87"):
