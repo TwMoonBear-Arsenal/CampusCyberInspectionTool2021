@@ -1,3 +1,5 @@
+
+import os
 class cryto:
 
     def decryp_Vige() :
@@ -133,7 +135,6 @@ class cryto:
             c=t
         print()
 
-<<<<<<< HEAD
     def wood_decry() :
         text=input("input the cryto :")
         n=0
@@ -156,6 +157,49 @@ class cryto:
                 r=random.choice(l)
                 print(chr(r),end="")
             n=n+1
-=======
         
->>>>>>> e73652238ae1004ea7563a545f969892b96db992
+
+
+    def crytolist() :
+        from Option import Option
+        optionList = []
+        optionList.append(Option(11,"維吉尼亞加密"))
+        optionList.append(Option(12,"維吉尼亞解密"))
+        optionList.append(Option(13,"RSA加密"))
+        optionList.append(Option(14,"RSA加密"))
+        optionList.append(Option(15,"RSA建立金鑰"))
+        optionList.append(Option(16,"線性亂數加解密"))
+        optionList.append(Option(17,"木棒加密"))
+        optionList.append(Option(18,"木棒解密"))
+        print()
+
+
+        while(True) :
+            os.system('cls')
+            for Option in optionList:
+                print("[", Option.number-10, "] ", Option.descritpion)
+            print("[", 99, "]", "返回")
+            selection = input("請輸入需要的功能：").strip()
+
+            print()
+
+            if(selection == "12"):
+                cryto.decryp_Vige()
+            elif(selection == "11"):
+                cryto.encryp_Vige()
+            elif(selection == "13"):
+                cryto.rsa_send()
+            elif(selection == "14"):
+                cryto.rsa_read()
+            elif(selection == "15"):
+                cryto.Make_a_rsa()
+            elif(selection == "16"):
+                cryto.linr_radom()
+            elif(selection == "17"):
+                cryto.wood_encry()
+            elif(selection == "18"):
+                cryto.wood_decry()
+            elif(selection == "99"):
+                return
+            else:
+                print("輸入錯誤")
