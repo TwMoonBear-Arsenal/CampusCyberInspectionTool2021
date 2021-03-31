@@ -150,15 +150,11 @@ class cryto:
         for i in range(48,122) :
             if (i>48 and i<57) or (i>65 and i<90) or (i>97 and i<122) :
                 l.append(i)
-        n=0
         for i in text :
             print(i,end="")
             for j in range(3) :
                 r=random.choice(l)
                 print(chr(r),end="")
-            n=n+1
-        
-
 
     def crytolist() :
         from Option import Option
@@ -203,3 +199,4 @@ class cryto:
                 return
             else:
                 print("輸入錯誤")
+
