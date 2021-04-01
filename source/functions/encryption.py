@@ -176,7 +176,7 @@ class cryto:
                 print("[", Option.number-10, "] ", Option.descritpion)
             print("[", 99, "]", "返回")
             selection = input("請輸入需要的功能：").strip()
-
+            os.system('cls')
             print()
 
             if(selection == "2"):
