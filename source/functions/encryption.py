@@ -200,4 +200,4 @@ class cryto:
             else:
                 print("輸入錯誤")
 
-            input("\n","按任意鍵繼續...")
+            input("\n按任意鍵繼續...")
