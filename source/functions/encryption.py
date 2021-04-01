@@ -93,7 +93,7 @@ class cryto:
         n,k=map(int,input("input your key :(split with space)").split())
         name=input("enter the path of your bin :(Don't use the used name of bin!)")
         output_file = open(name+".bin", 'wb')
-        text=input("plaintext/cyphertext=")
+        text=input("plaintext=")
         fb=[]
         for i in text :
             i=ord(i)
