@@ -179,21 +179,21 @@ class cryto:
 
             print()
 
-            if(selection == "12"):
+            if(selection == "2"):
                 cryto.decryp_Vige()
-            elif(selection == "11"):
+            elif(selection == "1"):
                 cryto.encryp_Vige()
-            elif(selection == "13"):
+            elif(selection == "3"):
                 cryto.rsa_send()
-            elif(selection == "14"):
+            elif(selection == "4"):
                 cryto.rsa_read()
-            elif(selection == "15"):
+            elif(selection == "5"):
                 cryto.Make_a_rsa()
-            elif(selection == "16"):
+            elif(selection == "6"):
                 cryto.linr_radom()
-            elif(selection == "17"):
+            elif(selection == "7"):
                 cryto.wood_encry()
-            elif(selection == "18"):
+            elif(selection == "8"):
                 cryto.wood_decry()
             elif(selection == "99"):
                 return
