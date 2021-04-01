@@ -162,7 +162,7 @@ class cryto:
         optionList.append(Option(11,"維吉尼亞加密"))
         optionList.append(Option(12,"維吉尼亞解密"))
         optionList.append(Option(13,"RSA加密"))
-        optionList.append(Option(14,"RSA加密"))
+        optionList.append(Option(14,"RSA解密"))
         optionList.append(Option(15,"RSA建立金鑰"))
         optionList.append(Option(16,"線性亂數加解密"))
         optionList.append(Option(17,"木棒加密"))
