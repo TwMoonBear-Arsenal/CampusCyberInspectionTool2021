@@ -8,7 +8,7 @@ from functions.shut import shut
 from functions.Ipconfig import Showip
 from functions.CryptoSystem import *
 from functions.Nslookup import Nslookupoption
-from functions.PortScanner import Portscanneroption
+from functions.PortScanner import thread_job
 
 
 def main():
@@ -73,7 +73,7 @@ def main():
         elif(selection == "10"):
             cryto.wood_decry()
         elif(selection == "4"):
-            Portscanneroption.option()
+            Scanport.thread_job()
         elif(selection=="5"):
             CryptoSystem.Cypto_system_options()
         elif(selection == "99"):

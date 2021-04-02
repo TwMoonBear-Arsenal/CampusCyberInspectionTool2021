@@ -1,40 +1,42 @@
-import socket  
-class Option:
-    
-    # 建構式
-    def __init__(self, number, descritpion):
-        self.number = number  # 編號
-        self.descritpion = descritpion  # 說明文字
+import threading, multiprocessing
+import sys
+import socket
+from datetime import datetime
 class Scanport:
-    def portscannerTCP():
-        ip = input('\033[0;31;42mInput IP which you want to know open ports:\n\033[0m').strip()  #getting ip-address of host
-        for port in range(65535):      #check for all available ports
-            try:
-                serv = socket.socket(socket.AF_INET,socket.SOCK_STREAM) # create a new socket
-                serv.bind((ip,port)) # bind socket with address  
-            except:
-                print('\033[32m[OPEN]\033[0m Port open :',port) #print open port number
-            serv.close() #close connection
-    def portscannerUDP():
-        ip = input('\033[0;31;42mInput IP which you want to know open ports:\n\033[0m').strip()  #getting ip-address of host
-        for port in range(65535):      #check for all available ports
-            try:
-                serv = socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # create a new socket
-                serv.bind((ip,port)) # bind socket with address  
-            except:
-                print('\033[32m[OPEN]\033[0m Port open :',port) #print open port number
-            serv.close() #close connection
-class Portscanneroption:
-    def option():
-        optionList = []
-        optionList.append(Option(1, "TCP"))
-        optionList.append(Option(2, "UDP"))
-        for option in optionList:
-            print("[", option.number, "] ", option.descritpion)
-        selection = input("請輸入需要的功能：").strip()
-        if(selection=="1"):
-            Scanport.portscannerTCP()
-        elif(selection=="2"):
-            Scanport.portscannerUDP()
-#Scanport.portscanner()
-#Portscanneroption.option()
+    @staticmethod
+    def portscanner():
+        #IP=raw_input('Input which u want to scan:').strip()
+        target = socket.gethostbyname(raw_input('Input which u want to scan:').strip()) 
+        
+        # Add Banner 
+        print("-" * 50)
+        print("Scanning Target: " + target)
+        print("Scanning started at:" + str(datetime.now()))
+        print("-" * 50)
+        try:
+            # will scan ports between 1 to 65,535
+            for port in range(1,65535):
+                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                socket.setdefaulttimeout(0.0001)
+                
+                # returns an error indicator
+                result = s.connect_ex((target,port))
+                if result ==0:
+                    print("Port {} is open".format(port))
+                s.close()
+        except KeyboardInterrupt:
+                print("\n Exitting Program !!!!")
+                sys.exit()
+        except socket.gaierror:
+                print("\n Hostname Could Not Be Resolved !!!!")
+                sys.exit()
+        except socket.error:
+                print("\ Server not responding !!!!")
+                sys.exit()
+                print("Scanning stopped at:" + str(datetime.now()))
+    @staticmethod
+    def thread_job():
+        for i in range(multiprocessing.cpu_count()):
+                t = threading.Thread(target=Scanport.portscanner) 
+        t.start()
+#Scanport.thread_job()
