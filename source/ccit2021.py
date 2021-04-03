@@ -1,16 +1,17 @@
 import argparse
 import os
-from functions.ClockFunc import ClockFunc #Demo
+from functions.ClockFunc import ClockFunc  # Demo
 from functions.encryption import cryto
 from functions.shut import shut
 from functions.Ipconfig import Showip
-from functions.openyt import openyt #豔婕
-from functions.bypassuac import bypassuac #豔婕
-from functions.changepassword import changepassword #豔婕
-from functions.Netstat import Netstat #綺娟
-from functions.Tracert import Traceip #綺娟
+from functions.Openyt import Openyt  # 豔婕
+from functions.Bypassuac import Bypassuac  # 豔婕
+from functions.Changepassword import Changepassword  # 豔婕
+from functions.Netstat import Netstat  # 綺娟
+from functions.Tracert import Traceip  # 綺娟
 from functions.Nslookup import Nslookup
 from functions.PortScanner import Scanport
+
 
 def main():
     # 準備參數解析
@@ -25,6 +26,9 @@ def main():
     optionList.append(ClockFunc())
     optionList.append(Netstat())
     optionList.append(Traceip())
+    optionList.append(Bypassuac())
+    optionList.append(Changepassword())
+    optionList.append(Openyt())
     print()
 
     # 以下持續循環直到使用者結束
@@ -37,7 +41,7 @@ def main():
         print("--------")
         for i in range(len(optionList)):
             print('[ {:>2} ]'.format(i+1), optionList[i].Description)
-        print("[", 99, "]", " 結束程式")
+        print("[", 99, "]", "結束程式")
 
         # 詢問使用者
         selection = int(input("請輸入需要的功能：").strip())
