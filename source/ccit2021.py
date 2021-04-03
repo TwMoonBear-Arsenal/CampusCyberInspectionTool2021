@@ -1,15 +1,16 @@
 import argparse
 import os
-import webbrowser
-from functions.ClockFunc import ClockFunc
+from functions.ClockFunc import ClockFunc #Demo
 from functions.encryption import cryto
 from functions.shut import shut
 from functions.Ipconfig import Showip
-from functions.Netstat import Netstat
-from functions.Tracert import Traceip
+from functions.openyt import openyt #豔婕
+from functions.bypassuac import bypassuac #豔婕
+from functions.changepassword import changepassword #豔婕
+from functions.Netstat import Netstat #綺娟
+from functions.Tracert import Traceip #綺娟
 from functions.Nslookup import Nslookup
 from functions.PortScanner import Scanport
-
 
 def main():
     # 準備參數解析
