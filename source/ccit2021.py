@@ -5,10 +5,11 @@ from functions.ClockFunc import ClockFunc
 from functions.encryption import cryto
 from functions.shut import shut
 from functions.Ipconfig import Showip
-from functions.netstat import netstat
-from functions.tracert import traceip
+from functions.Netstat import Netstat
+from functions.Tracert import Traceip
 from functions.Nslookup import Nslookup
 from functions.PortScanner import Scanport
+
 
 def main():
     # 準備參數解析
@@ -21,8 +22,8 @@ def main():
     # 準備選單
     optionList = []
     optionList.append(ClockFunc())
-    optionList.append(netstat())
-    optionList.append(traceip())
+    optionList.append(Netstat())
+    optionList.append(Traceip())
     print()
 
     # 以下持續循環直到使用者結束
