@@ -1,12 +1,14 @@
-import argparse  # 參數解析使用
+import argparse
 import os
-from Option import Option
-from functions.Clock import Clock
+import webbrowser
+from functions.ClockFunc import ClockFunc
+from functions.encryption import cryto
 from functions.shut import shut
 from functions.Ipconfig import Showip
 from functions.netstat import netstat
 from functions.tracert import traceip
-import webbrowser
+from functions.Nslookup import Nslookup
+from functions.PortScanner import Scanport
 
 def main():
     # 準備參數解析
@@ -18,14 +20,12 @@ def main():
 
     # 準備選單
     optionList = []
-    optionList.append(Option(1, "顯示今天日期"))
-    optionList.append(Option(2, "顯示本地端IP地址"))
-    optionList.append(Option(9, "查詢本機port連線狀態"))
-    optionList.append(Option(10, "查詢本機與目標網路連線節點"))
-    optionList.append(Option(77,"surprise"))
-    optionList.append(Option(87, "Do you want know who is Simon?"))
+    optionList.append(ClockFunc())
+    optionList.append(netstat())
+    optionList.append(traceip())
     print()
 
+    # 以下持續循環直到使用者結束
     while(True):
 
         # 顯示選單
@@ -33,28 +33,19 @@ def main():
         print(app_description)
         print(epilog_text)
         print("--------")
-        for option in optionList:
-            print("[", option.number, "] ", option.descritpion)
+        for i in range(len(optionList)):
+            print('[ {:>2} ]'.format(i+1), optionList[i].Description)
         print("[", 99, "]", " 結束程式")
 
         # 詢問使用者
-        selection = input("請輸入需要的功能：").strip()
+        selection = int(input("請輸入需要的功能：").strip())
         print()
-        if(selection == "1"):
-            Clock.ShowTime()
-        elif(selection == '2'):
-            Showip.ipconfig()
-        elif(selection == '9'):
-            netstat.netstat()
-        elif(selection == '10'):
-            traceip.tracert()
-        elif(selection == "77"):
-            shut.shut()
-        elif(selection == "87"):
-            webbrowser.open("https://www.facebook.com/simon.lin.56829")
-            for i in range(1,100):
-               print('878787878787 "Simon" db2')
-        elif(selection == "99"):
+
+        # 依使用者選號找出功能項
+        if((selection - 1) < len(optionList)):
+            func = optionList[selection-1]
+            func.Run()
+        elif(selection == 99):
             print("See you next time...")
             print()
             return
@@ -62,6 +53,7 @@ def main():
             print("輸入錯誤")
 
         # 開始下一循環
+        print()
         input("按任意鍵繼續...")
 
 
