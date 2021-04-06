@@ -1,5 +1,7 @@
 import argparse
 import os
+from functions.Path import Path
+from functions.tcp_syn_flood import syn_flood
 from functions.ClockFunc import ClockFunc  # Demo
 from functions.encryption import cryto
 from functions.Ipconfig import Showip
@@ -35,10 +37,6 @@ def main():
     optionList.append(frequency())
     optionList.append(nmap())
     optionList.append(notepad())
- Showip.ipconfig()
-
-    
-    
     print()
 
     # 以下持續循環直到使用者結束
@@ -71,7 +69,6 @@ def main():
         # 開始下一循環
         print()
         input("按任意鍵繼續...")
-
 
 if __name__ == "__main__":
     main()
