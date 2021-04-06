@@ -1,24 +1,25 @@
 import argparse
 import os
 
-# Kung-327
-from functions.reptile_movie import reptile_movie
 # Demo
 from functions.ClockFunc import ClockFunc
 # 綺娟
-from functions.Netstat import Netstat
-from functions.Tracert import Traceip
+from functions.Netstat import Netstat  # (初級)
+from functions.Tracert import Traceip  # (中級)
 # 豔婕
-from functions.Openyt import Openyt
-from functions.Bypassuac import Bypassuac
-from functions.Changepassword import Changepassword
+from functions.Openyt import Openyt  # (初級)
+from functions.Bypassuac import Bypassuac  # (中級)
+from functions.Changepassword import Changepassword  # (中級)
 # benson871229
-# from functions.LetterFrequency import LetterFrequency
-# from functions.nmap import nmap
-from functions.Notepad import Notepad
+# from functions.LetterFrequency import LetterFrequency # (中級)
+# from functions.nmap import nmap # (初級)
+from functions.Notepad import Notepad  # (中級)
 # 東東
-from functions.Path import Path
-# from functions.tcp_syn_flood import syn_flood
+from functions.Path import Path  # (初級)
+# from functions.tcp_syn_flood import syn_flood # (高級)
+# Kung-327
+# from functions.reptile_movie import reptile_movie  # (高級)
+
 
 def main():
     # 準備參數解析
@@ -30,7 +31,6 @@ def main():
 
     # 準備選單
     optionList = []
-    optionList.append(reptile_movie())
     optionList.append(ClockFunc())
     optionList.append(Netstat())
     optionList.append(Traceip())
@@ -42,6 +42,7 @@ def main():
     optionList.append(Notepad())
     optionList.append(Path())
     # optionList.append(syn_flood())
+    # optionList.append(reptile_movie())
     print()
 
     # 以下持續循環直到使用者結束
