@@ -1,5 +1,8 @@
 import argparse
 import os
+
+# Kung-327
+from functions.reptile_movie import reptile_movie
 # Demo
 from functions.ClockFunc import ClockFunc
 # 綺娟
@@ -17,7 +20,6 @@ from functions.Notepad import Notepad
 from functions.Path import Path
 # from functions.tcp_syn_flood import syn_flood
 
-
 def main():
     # 準備參數解析
     app_description = "校園資安測試常用工具集合"
@@ -28,6 +30,7 @@ def main():
 
     # 準備選單
     optionList = []
+    optionList.append(reptile_movie())
     optionList.append(ClockFunc())
     optionList.append(Netstat())
     optionList.append(Traceip())
