@@ -1,7 +1,7 @@
 import os
 
 
-def Notepad():
+class Notepad():
 
     @property
     def Description(self):

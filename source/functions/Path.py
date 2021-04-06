@@ -1,10 +1,13 @@
 from os import name
 import sys
 
+
 class Path:
 
-    def ShowPath():
-        print(sys.path)
+    @property
+    def Description(self):
+        return('顯示Python環境路徑')
 
-if __name__ == "__main__":
-    Path.ShowPath()
+    def Run(self):
+        print(sys.path)
+        return

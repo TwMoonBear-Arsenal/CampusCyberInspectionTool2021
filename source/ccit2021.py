@@ -10,12 +10,12 @@ from functions.Openyt import Openyt
 from functions.Bypassuac import Bypassuac
 from functions.Changepassword import Changepassword
 # benson871229
-from functions.LetterFrequency import LetterFrequency
-from functions.nmap import nmap
+# from functions.LetterFrequency import LetterFrequency
+# from functions.nmap import nmap
 from functions.Notepad import Notepad
 # 東東
 from functions.Path import Path
-from functions.tcp_syn_flood import syn_flood
+# from functions.tcp_syn_flood import syn_flood
 
 
 def main():
@@ -34,11 +34,11 @@ def main():
     optionList.append(Openyt())
     optionList.append(Bypassuac())
     optionList.append(Changepassword())
-    optionList.append(LetterFrequency())
-    optionList.append(nmap())
+    # optionList.append(LetterFrequency())
+    # optionList.append(nmap())
     optionList.append(Notepad())
     optionList.append(Path())
-    optionList.append(syn_flood())
+    # optionList.append(syn_flood())
     print()
 
     # 以下持續循環直到使用者結束
