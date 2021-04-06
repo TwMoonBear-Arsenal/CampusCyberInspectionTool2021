@@ -1,13 +1,23 @@
-import argparse  # 參數解析使用
+import argparse
 import os
-from Option import Option
-from functions.Clock import Clock
 from functions.Path import Path
 from functions.tcp_syn_flood import syn_flood
-#test
+from functions.ClockFunc import ClockFunc  # Demo
+from functions.encryption import cryto
+from functions.Ipconfig import Showip
+from functions.shut import shut # benson871229
+from functions.letter_frequency import frequency # benson871229
+from functions.nmap import nmap  # benson871229
+from functions.mkdir import notepad  # benson871229
+from functions.Openyt import Openyt  # 豔婕
+from functions.Bypassuac import Bypassuac  # 豔婕
+from functions.Changepassword import Changepassword  # 豔婕
+from functions.Netstat import Netstat  # 綺娟
+from functions.Tracert import Traceip  # 綺娟
+from functions.Nslookup import Nslookup
+from functions.PortScanner import Scanport
 
 def main():
-
     # 準備參數解析
     app_description = "校園資安測試常用工具集合"
     epilog_text = "歡迎至https://github.com/TwMoonBear-Arsenal/BetterCalculator/issues提供建議"
@@ -17,11 +27,19 @@ def main():
 
     # 準備選單
     optionList = []
-    optionList.append(Option(1, "顯示今天日期"))
-    optionList.append(Option(97, "TCP_SYN_Flood"))
-    optionList.append(Option(98, "顯示Python 'LanguageServer'路徑"))
+    optionList.append(ClockFunc())
+    optionList.append(Netstat())
+    optionList.append(Traceip())
+    optionList.append(Bypassuac())
+    optionList.append(Changepassword())
+    optionList.append(Openyt())
+    optionList.append(shut())
+    optionList.append(frequency())
+    optionList.append(nmap())
+    optionList.append(notepad())
     print()
 
+    # 以下持續循環直到使用者結束
     while(True):
 
         # 顯示選單
@@ -29,20 +47,19 @@ def main():
         print(app_description)
         print(epilog_text)
         print("--------")
-        for option in optionList:
-            print("[", option.number, "] ", option.descritpion)
-        print("[", 99, "]", " 結束程式")
+        for i in range(len(optionList)):
+            print('[ {:>2} ]'.format(i+1), optionList[i].Description)
+        print("[", 99, "]", "結束程式")
 
         # 詢問使用者
-        selection = input("請輸入需要的功能：").strip()
+        selection = int(input("請輸入需要的功能：").strip())
         print()
-        if(selection == "1"):
-            Clock.ShowTime()
-        elif(selection == '97'):
-            syn_flood.MyOption()
-        elif(selection == "98"):
-            Path.ShowPath()
-        elif(selection == "99"):
+
+        # 依使用者選號找出功能項
+        if((selection - 1) < len(optionList)):
+            func = optionList[selection-1]
+            func.Run()
+        elif(selection == 99):
             print("See you next time...")
             print()
             return
@@ -50,8 +67,8 @@ def main():
             print("輸入錯誤")
 
         # 開始下一循環
+        print()
         input("按任意鍵繼續...")
-
 
 if __name__ == "__main__":
     main()
