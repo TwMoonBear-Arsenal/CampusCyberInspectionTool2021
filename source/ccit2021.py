@@ -1,21 +1,22 @@
 import argparse
 import os
+# Demo
+from functions.ClockFunc import ClockFunc
+# 綺娟
+from functions.Netstat import Netstat
+from functions.Tracert import Traceip
+# 豔婕
+from functions.Openyt import Openyt
+from functions.Bypassuac import Bypassuac
+from functions.Changepassword import Changepassword
+# benson871229
+from functions.LetterFrequency import LetterFrequency
+from functions.nmap import nmap
+from functions.Notepad import Notepad
+# 東東
 from functions.Path import Path
 from functions.tcp_syn_flood import syn_flood
-from functions.ClockFunc import ClockFunc  # Demo
-from functions.encryption import cryto
-from functions.Ipconfig import Showip
-from functions.shut import shut # benson871229
-from functions.letter_frequency import frequency # benson871229
-from functions.nmap import nmap  # benson871229
-from functions.mkdir import notepad  # benson871229
-from functions.Openyt import Openyt  # 豔婕
-from functions.Bypassuac import Bypassuac  # 豔婕
-from functions.Changepassword import Changepassword  # 豔婕
-from functions.Netstat import Netstat  # 綺娟
-from functions.Tracert import Traceip  # 綺娟
-from functions.Nslookup import Nslookup
-from functions.PortScanner import Scanport
+
 
 def main():
     # 準備參數解析
@@ -30,13 +31,14 @@ def main():
     optionList.append(ClockFunc())
     optionList.append(Netstat())
     optionList.append(Traceip())
+    optionList.append(Openyt())
     optionList.append(Bypassuac())
     optionList.append(Changepassword())
-    optionList.append(Openyt())
-    optionList.append(shut())
-    optionList.append(frequency())
+    optionList.append(LetterFrequency())
     optionList.append(nmap())
-    optionList.append(notepad())
+    optionList.append(Notepad())
+    optionList.append(Path())
+    optionList.append(syn_flood())
     print()
 
     # 以下持續循環直到使用者結束
@@ -69,6 +71,7 @@ def main():
         # 開始下一循環
         print()
         input("按任意鍵繼續...")
+
 
 if __name__ == "__main__":
     main()
