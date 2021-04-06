@@ -2,8 +2,11 @@ import argparse
 import os
 from functions.ClockFunc import ClockFunc  # Demo
 from functions.encryption import cryto
-from functions.shut import shut
 from functions.Ipconfig import Showip
+from functions.shut import shut # benson871229
+from functions.letter_frequency import frequency # benson871229
+from functions.nmap import nmap  # benson871229
+from functions.mkdir import notepad  # benson871229
 from functions.Openyt import Openyt  # 豔婕
 from functions.Bypassuac import Bypassuac  # 豔婕
 from functions.Changepassword import Changepassword  # 豔婕
@@ -11,7 +14,6 @@ from functions.Netstat import Netstat  # 綺娟
 from functions.Tracert import Traceip  # 綺娟
 from functions.Nslookup import Nslookup
 from functions.PortScanner import Scanport
-
 
 def main():
     # 準備參數解析
@@ -29,6 +31,14 @@ def main():
     optionList.append(Bypassuac())
     optionList.append(Changepassword())
     optionList.append(Openyt())
+    optionList.append(shut())
+    optionList.append(frequency())
+    optionList.append(nmap())
+    optionList.append(notepad())
+ Showip.ipconfig()
+
+    
+    
     print()
 
     # 以下持續循環直到使用者結束
