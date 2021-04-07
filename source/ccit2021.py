@@ -27,8 +27,9 @@ from functions.Path import Path  # (初級)
 from functions.Ping import Ping  # (中級)
 from functions.Ping import Ping2  # (中級)
 from functions.Ping import Ping3  # (中級)
-#永翰
-from function.Encryption import cryto # (中級*n)
+# 永翰
+from functions.encryption import Cryto  # (中級*n)
+
 
 def main():
     # 準備參數解析
