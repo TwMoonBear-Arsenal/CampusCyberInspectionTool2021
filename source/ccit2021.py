@@ -1,13 +1,32 @@
-import argparse  # 參數解析使用
+import argparse
 import os
-from Option import Option
-from functions.Clock import Clock
-from functions.shut import shut
-from functions.Ipconfig import Showip
+
+# Demo
+from functions.ClockFunc import ClockFunc
+# 綺娟
+from functions.Netstat import Netstat  # (初級)
+from functions.Tracert import Traceip  # (中級)
+# 豔婕
+from functions.Openyt import Openyt  # (初級)
+from functions.Bypassuac import Bypassuac  # (中級)
+from functions.Changepassword import Changepassword  # (中級)
+# benson871229
+# from functions.LetterFrequency import LetterFrequency # (中級)
+# from functions.nmap import nmap # (初級)
+from functions.Notepad import Notepad  # (中級)
+# 東東
+from functions.Path import Path  # (初級)
+# from functions.tcp_syn_flood import syn_flood # (高級)
+# Kung-327
+# from functions.reptile_movie import reptile_movie  # (高級)
+# Kiritorian
+# from functions.Func import ST  #(未完整->初級)
+# tims871031
+# (未完整->初級)
+# 庭維
 from functions.Ping import ping
 from functions.Ping import ping2
 from functions.Ping import ping3
-import webbrowser
 
 def main():
     # 準備參數解析
@@ -19,15 +38,21 @@ def main():
 
     # 準備選單
     optionList = []
-    optionList.append(Option(1, "顯示今天日期"))
-    optionList.append(Option(2, "顯示本地端IP地址"))
-    optionList.append(Option(24, "ping單個ip"))
-    optionList.append(Option(25, "查找/24內的主機"))
-    optionList.append(Option(26, "以CIDR查找主機"))
-    optionList.append(Option(77,"surprise"))
-    optionList.append(Option(87, "Do you want know who is Simon?"))
+    optionList.append(ClockFunc())
+    optionList.append(Netstat())
+    optionList.append(Traceip())
+    optionList.append(Openyt())
+    optionList.append(Bypassuac())
+    optionList.append(Changepassword())
+    # optionList.append(LetterFrequency())
+    # optionList.append(nmap())
+    optionList.append(Notepad())
+    optionList.append(Path())
+    # optionList.append(syn_flood())
+    # optionList.append(reptile_movie())
     print()
 
+    # 以下持續循環直到使用者結束
     while(True):
 
         # 顯示選單
@@ -35,30 +60,18 @@ def main():
         print(app_description)
         print(epilog_text)
         print("--------")
-        for option in optionList:
-            print("[", option.number, "] ", option.descritpion)
-        print("[", 99, "]", " 結束程式")
+        for i in range(len(optionList)):
+            print('[ {:>2} ]'.format(i+1), optionList[i].Description)
+        print("[", 99, "]", "結束程式")
 
         # 詢問使用者
-        selection = input("請輸入需要的功能：").strip()
+        selection = int(input("請輸入需要的功能：").strip())
         print()
-        if(selection == "1"):
-            Clock.ShowTime()
-        elif(selection == '2'):
-            Showip.ipconfig()
-        elif(selection == '24'):
-            ping.simpleping()
-        elif(selection == '25'):
-            ping2.hardping()            
-        elif(selection == '26'):
-            ping3.veryhardping() 
-        elif(selection == "77"):
-            shut.shut()
-        elif(selection == "87"):
-            webbrowser.open("https://www.facebook.com/simon.lin.56829")
-            for i in range(1,100):
-               print('878787878787 "Simon" db2')
-        elif(selection == "99"):
+        # 依使用者選號找出功能項
+        if((selection - 1) < len(optionList)):
+            func = optionList[selection-1]
+            func.Run()
+        elif(selection == 99):
             print("See you next time...")
             print()
             return
@@ -66,6 +79,7 @@ def main():
             print("輸入錯誤")
 
         # 開始下一循環
+        print()
         input("按任意鍵繼續...")
 
 
