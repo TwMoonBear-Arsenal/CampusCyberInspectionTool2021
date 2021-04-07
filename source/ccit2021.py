@@ -20,7 +20,9 @@ from functions.Path import Path  # (初級)
 # Kung-327
 # from functions.reptile_movie import reptile_movie  # (高級)
 # Kiritorian
-# from functions.Func import ST  # (初級)
+# from functions.Func import ST  #(未完整->初級)
+# tims871031
+# (未完整->初級)
 
 def main():
     # 準備參數解析
