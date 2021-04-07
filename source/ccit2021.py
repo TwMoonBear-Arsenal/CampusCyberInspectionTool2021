@@ -1,12 +1,28 @@
-import argparse  # 參數解析使用
+import argparse
 import os
-from Option import Option
-from functions.Clock import Clock
-from functions.shut import shut
-from functions.Ipconfig import Showip
-from functions.Nslookup import Nslookup
-from functions.PortScanner import Scanport
-import webbrowser 
+
+# Demo
+from functions.ClockFunc import ClockFunc
+# 綺娟
+from functions.Netstat import Netstat  # (初級)
+from functions.Tracert import Traceip  # (中級)
+# 豔婕
+from functions.Openyt import Openyt  # (初級)
+from functions.Bypassuac import Bypassuac  # (中級)
+from functions.Changepassword import Changepassword  # (中級)
+# benson871229
+# from functions.LetterFrequency import LetterFrequency # (中級)
+# from functions.nmap import nmap # (初級)
+from functions.Notepad import Notepad  # (中級)
+# 東東
+from functions.Path import Path  # (初級)
+# from functions.tcp_syn_flood import syn_flood # (高級)
+# Kung-327
+# from functions.reptile_movie import reptile_movie  # (高級)
+# Kiritorian
+# from functions.Func import ST  #(未完整->初級)
+# tims871031
+# (未完整->初級)
 
 def main():
     # 準備參數解析
@@ -18,15 +34,21 @@ def main():
 
     # 準備選單
     optionList = []
-    optionList.append(Option(1, "顯示今天日期"))
-    optionList.append(Option(2, "顯示本地端IP地址"))
-    optionList.append(Option(3, "ip或hostname相互反查"))
-    optionList.append(Option(4, "詢找目標主機有開啟的port"))
-    optionList.append(Option(77,"surprise"))
-    optionList.append(Option(87, "Do you want know who is Simon?"))
-    optionList.append(Option(78, "AES加密"))
+    optionList.append(ClockFunc())
+    optionList.append(Netstat())
+    optionList.append(Traceip())
+    optionList.append(Openyt())
+    optionList.append(Bypassuac())
+    optionList.append(Changepassword())
+    # optionList.append(LetterFrequency())
+    # optionList.append(nmap())
+    optionList.append(Notepad())
+    optionList.append(Path())
+    # optionList.append(syn_flood())
+    # optionList.append(reptile_movie())
     print()
 
+    # 以下持續循環直到使用者結束
     while(True):
 
         # 顯示選單
@@ -34,30 +56,18 @@ def main():
         print(app_description)
         print(epilog_text)
         print("--------")
-        for option in optionList:
-            print("[", option.number, "] ", option.descritpion)
-        print("[", 99, "]", " 結束程式")
+        for i in range(len(optionList)):
+            print('[ {:>2} ]'.format(i+1), optionList[i].Description)
+        print("[", 99, "]", "結束程式")
 
         # 詢問使用者
-        selection = input("請輸入需要的功能：").strip()
-        if(selection == "1"):
-            Clock.ShowTime()
-        elif(selection == "2"):
-            Showip.ipconfig()
-        elif(selection == "3"):
-            nslookup_selection = input("\033[33mchoose type you want to use:\033[0m\n[1]hostname2ip\n[2]ip2hostname\n").strip()
-            #print(nslookup_selection)
-            if(nslookup_selection == "1"):
-                Nslookup.domainip()
-            else:
-                Nslookup.ipdomain()
-        elif(selection == "4"):
-            portscanner_selection = input("\033[33mchoose type you want to use:\033[0m\n[1]TCP\n[2]UDP\n").strip()
-            if(portscanner_selection == "1"):
-                Scanport.portscannerTCP()
-            else:
-                Scanport.portscannerUDP()
-        elif(selection == "99"):
+        selection = int(input("請輸入需要的功能：").strip())
+        print()
+        # 依使用者選號找出功能項
+        if((selection - 1) < len(optionList)):
+            func = optionList[selection-1]
+            func.Run()
+        elif(selection == 99):
             print("See you next time...")
             print()
             return
@@ -65,6 +75,7 @@ def main():
             print("輸入錯誤")
 
         # 開始下一循環
+        print()
         input("按任意鍵繼續...")
 
 
