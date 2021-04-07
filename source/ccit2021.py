@@ -23,6 +23,10 @@ from functions.Path import Path  # (初級)
 # from functions.Func import ST  #(未完整->初級)
 # tims871031
 # (未完整->初級)
+# 庭維
+from functions.Ping import ping
+from functions.Ping import ping2
+from functions.Ping import ping3
 
 def main():
     # 準備參數解析
