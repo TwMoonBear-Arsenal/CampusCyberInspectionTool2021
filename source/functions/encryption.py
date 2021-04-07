@@ -1,3 +1,5 @@
+
+import os
 class cryto:
 
     def decryp_Vige() :
@@ -91,7 +93,7 @@ class cryto:
         n,k=map(int,input("input your key :(split with space)").split())
         name=input("enter the path of your bin :(Don't use the used name of bin!)")
         output_file = open(name+".bin", 'wb')
-        text=input("plaintext/cyphertext=")
+        text=input("plaintext=")
         fb=[]
         for i in text :
             i=ord(i)
@@ -153,5 +155,49 @@ class cryto:
             for j in range(3) :
                 r=random.choice(l)
                 print(chr(r),end="")
-            
 
+    def crytolist() :
+        from Option import Option
+        optionList = []
+        optionList.append(Option(11,"維吉尼亞加密"))
+        optionList.append(Option(12,"維吉尼亞解密"))
+        optionList.append(Option(13,"RSA加密"))
+        optionList.append(Option(14,"RSA解密"))
+        optionList.append(Option(15,"RSA建立金鑰"))
+        optionList.append(Option(16,"線性亂數加解密"))
+        optionList.append(Option(17,"木棒加密"))
+        optionList.append(Option(18,"木棒解密"))
+        print()
+
+
+        while(True) :
+            os.system('cls')
+            for Option in optionList:
+                print("[", Option.number-10, "] ", Option.descritpion)
+            print("[", 99, "]", "返回")
+            selection = input("請輸入需要的功能：").strip()
+            os.system('cls')
+            print()
+
+            if(selection == "2"):
+                cryto.decryp_Vige()
+            elif(selection == "1"):
+                cryto.encryp_Vige()
+            elif(selection == "3"):
+                cryto.rsa_send()
+            elif(selection == "4"):
+                cryto.rsa_read()
+            elif(selection == "5"):
+                cryto.Make_a_rsa()
+            elif(selection == "6"):
+                cryto.linr_radom()
+            elif(selection == "7"):
+                cryto.wood_encry()
+            elif(selection == "8"):
+                cryto.wood_decry()
+            elif(selection == "99"):
+                return
+            else:
+                print("輸入錯誤")
+
+            input("\n按任意鍵繼續...")
