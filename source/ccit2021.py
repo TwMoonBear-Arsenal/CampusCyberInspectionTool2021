@@ -24,9 +24,10 @@ from functions.Path import Path  # (初級)
 # tims871031
 # (未完整->初級)
 # 庭維
-from functions.Ping import ping
-from functions.Ping import ping2
-from functions.Ping import ping3
+from functions.Ping import Ping  # (中級)
+from functions.Ping import Ping2  # (中級)
+from functions.Ping import Ping3  # (中級)
+
 
 def main():
     # 準備參數解析
@@ -50,6 +51,10 @@ def main():
     optionList.append(Path())
     # optionList.append(syn_flood())
     # optionList.append(reptile_movie())
+    optionList.append(Ping())
+    optionList.append(Ping2())
+    optionList.append(Ping3())
+
     print()
 
     # 以下持續循環直到使用者結束
