@@ -1,6 +1,5 @@
 import argparse
 import os
-
 # Demo
 from functions.ClockFunc import ClockFunc
 # 綺娟
@@ -29,6 +28,9 @@ from functions.Ping import Ping2  # (中級)
 from functions.Ping import Ping3  # (中級)
 # 永翰
 from functions.encryption import Cryto  # (中級*n)
+@ 家維 wbird0606
+from functions.Nslookup import Nslookupoption
+from functions.PortScanner import thread_job
 
 
 def main():
@@ -56,6 +58,8 @@ def main():
     optionList.append(Ping())
     optionList.append(Ping2())
     optionList.append(Ping3())
+    optionList.append(Cryto())
+    optionList.append(Cryto())
     optionList.append(Cryto())
     print()
 
