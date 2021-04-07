@@ -19,7 +19,8 @@ from functions.Path import Path  # (初級)
 # from functions.tcp_syn_flood import syn_flood # (高級)
 # Kung-327
 # from functions.reptile_movie import reptile_movie  # (高級)
-
+# Kiritorian
+# from functions.Func import ST  # (初級)
 
 def main():
     # 準備參數解析
@@ -60,7 +61,6 @@ def main():
         # 詢問使用者
         selection = int(input("請輸入需要的功能：").strip())
         print()
-
         # 依使用者選號找出功能項
         if((selection - 1) < len(optionList)):
             func = optionList[selection-1]
