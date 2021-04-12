@@ -9,18 +9,18 @@ from functions.Tracert import Traceip  # (中級)
 from functions.Openyt import Openyt  # (初級)
 from functions.Bypassuac import Bypassuac  # (中級)
 from functions.Changepassword import Changepassword  # (中級)
-# benson871229
+# 禹森 benson871229
 # from functions.LetterFrequency import LetterFrequency # (中級)
 # from functions.nmap import nmap # (初級)
 from functions.Notepad import Notepad  # (中級)
 # 東東
 from functions.Path import Path  # (初級)
 # from functions.tcp_syn_flood import syn_flood # (高級)
-# Kung-327
+# 坤泓 Kung-327
 # from functions.reptile_movie import reptile_movie  # (高級)
-# Kiritorian
+# 冠宇 Kiritorian
 # from functions.Func import ST  #(未完整->初級)
-# tims871031
+# 政勳 tims871031
 # (未完整->初級)
 # 庭維
 from functions.Ping import Ping  # (中級)
